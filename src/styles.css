@@ -1,0 +1,21 @@
+.error input{
+    border-bottom: 2px solid red;
+  }
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+.text-line {
+    background-color: transparent;
+    color: black;
+    outline: none;
+    outline-style: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid black 1px;
+    padding: 3px 10px;
+    width: 100%; /* ทำให้ input เต็มความกว้างของ container */
+    box-sizing: border-box;
+}

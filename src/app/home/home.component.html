@@ -1,0 +1,82 @@
+<div class="navbar">
+    <div class="navbar-left">
+      <img class="logo" src="../../assets/image/IconYodYa.png" alt="Logo">
+    </div>
+    <div class="navbar-right">
+        <h3><a routerLink="/home">หน้าหลัก</a></h3>
+        <h3><a routerLink="/activity-club">กิจกรรมของชมรม</a></h3>
+        <h3><a routerLink="/calendar">ปฏิทินชมรม</a></h3>
+        <div class="profile">
+            <img src="../../assets/image/profile.png" alt="Profile">
+        </div>
+    </div>
+</div>
+<div class="container">
+    <!-- (click)="togglePopup()" -->
+    <button >เพิ่มกิจกรรม</button>
+    <!-- [ngClass]="{'show': showPopup}" -->
+    <div class="popup" >
+    <div class="popup-content">
+        <span class="close" (click)="togglePopup()">&times;</span>
+        <h2>เพิ่มกิจกรรม</h2>
+        <label for="activityName">ชื่อกิจกรรม:</label>
+        <input type="text" id="activityName" name="activityName" [(ngModel)]="newActivityName">
+        <button (click)="addActivity()">บันทึก</button>
+    </div>
+    </div>
+</div>
+
+<div class="background">
+    <div class="feed-background">
+        <div class="post">
+            <div class="heading">
+                <div class="post-profile">
+                    <img class="icon-profile" src="../../assets/image/profile.png" alt="Post Profile">
+                    <div class="post-user-name">ชื่อ-นามสกุล</div>
+                    <img class="hamburger" (click)="togglePopup()" src="../../assets/image/Group.png" alt="Hamburger-Dot">
+                    <div class="popup" [ngClass]="{'show': showPopup}">
+                        <span class="close" (click)="togglePopup()">&times;</span>
+                        <div (click)="editPost()">แก้ไขโพสต์</div>
+                        <div (click)="deletePost()">ลบโพสต์</div>
+                    </div>
+                </div>
+                <div class="post-text">
+                    <div class="post-name-activity">ชื่อกิจกรรม</div>
+                    <div class="post-date">วันที่</div>
+                    <div class="post-location">สถานที่</div>
+                </div>
+                <div class="post-detail">เนื้อหา</div>
+                <div class="post-limk" routerLink="/">ลิ้งค์</div>
+            </div>
+            <div class="position-image">
+                <img class="post-image" id="image-1" src="../../assets/image/bg.png" alt="Post Image 1">
+                <img class="post-image" id="image-2" src="../../assets/image/bg.png" alt="Post Image 2">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="background">
+    <div class="feed-background">
+        <div class="post">
+            <div class="heading">
+                <div class="post-profile">
+                    <img class="icon-profile" src="../../assets/image/profile.png" alt="Post Profile">
+                    <div class="post-user-name">ชื่อ-นามสกุล</div>
+                    <img class="hamburger" src="../../assets/image/Group.png" alt="Hamburger-Dot">
+                    <div class="popup" [ngClass]="{'show': showPopup}">
+                        <div (click)="editPost()">แก้ไขโพสต์</div>
+                        <div (click)="deletePost()">ลบโพสต์</div>
+                    </div>
+                </div>
+                <div class="post-text">
+                    <div class="post-name-activity">ชื่อกิจกรรม</div>
+                    <div class="post-date">วันที่</div>
+                    <div class="post-location">สถานที่</div>
+                </div>
+                <div class="post-detail">เนื้อหา</div>
+                <div class="post-limk" routerLink="/">ลิ้งค์</div>
+            </div>
+        </div>
+    </div>
+</div>
